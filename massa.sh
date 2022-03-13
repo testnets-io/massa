@@ -9,13 +9,13 @@ CHOICE=$(
 whiptail --title "Massa Manager" --menu "Make a Choice" 25 78 16 \
 	"1" "Node Installation."   \
 	"2" "Node & Client Update."  \
-	"3" "Routability." \
+	"3" "Routability. - Only run once" \
 	"4" "Bootstrapping." \
 	"5" "Firewall." \
 	"6" "Start Client." \
-    "7" "Create Wallet." \
-    "8" "View wallet." \
-    "9" "Buy Rolls." \
+    	"7" "Create Wallet. - Only run once" \
+    	"8" "View wallet." \
+    	"9" "Buy Rolls." \
 	"10" "End script"  3>&2 2>&1 1>&3	
 )
 
@@ -68,7 +68,6 @@ sudo systemctl daemon-reload
 sudo systemctl enable massa
 sudo systemctl start massa
 echo "Node installed and running"
-echo "Please restart your terminal before completing any of the other options"
 ;;
 
 
